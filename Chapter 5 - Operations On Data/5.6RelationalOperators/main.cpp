@@ -3,8 +3,8 @@
 
 int main(){
    
-    int number1 {20};
-    int number2 {20};
+    int number1 {45};
+    int number2 {60};
 	
     std::cout << "number1 : " << number1 << std::endl;
     std::cout << "number2 : " << number2 << std::endl;
