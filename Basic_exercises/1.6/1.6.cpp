@@ -1,46 +1,47 @@
 /*
 
-5. Write a program in C++ to check the upper and lower limits of integer.
-Expected Output:
-Check the upper and lower limits of integer :
---------------------------------------------------
-The maximum limit of int data type : 2147483647
-The minimum limit of int data type : -2147483648
-The maximum limit of unsigned int data type : 4294967295
-The maximum limit of long long data type : 9223372036854775807
-The minimum limit of long long data type : -9223372036854775808
-The maximum limit of unsigned long long data type : 18446744073709551615
-The Bits contain in char data type : 8
-The maximum limit of char data type : 127
-The minimum limit of char data type : -128
-The maximum limit of signed char data type : 127
-The minimum limit of signed char data type : -128
-The maximum limit of unsigned char data type : 255
-The minimum limit of short data type : -32768
-The maximum limit of short data type : 32767
-The maximum limit of unsigned short data type : 65535
+6. Write a program in C++ to check whether the primitive values crossing the limits or not.
+Check whether the primitive values crossing the limits or not :
+--------------------------------------------------------------------
+The Gender is : F
+Is she married? : 1
+Number of sons she has : 2
+Year of her appointment : 2009
+Salary for a year : 1500000
+Height is : 79.48
+GPA is 4.69
+Salary drawn upto : 12047235
+Balance till : 995324987
 
 */
 
 #include <iostream>
 #include <limits>
 
+int main() {
+    // Define variables with their values
+    char gender = 'F'; // Assuming gender is either 'M' or 'F'
+    bool isMarried = true; // Assuming 1 for true and 0 for false
+    unsigned short numberOfSons = 2; // Assuming number of sons cannot be negative
+    int yearOfAppointment = 2009;
+    double salaryForAYear = 1500000.0;
+    float height = 79.48f;
+    float gpa = 4.69f; // GPA typically a floating point number
+    long salaryDrawnUpto = 12047235;
+    long long balanceTill = 995324987;
 
-
-int main(){
-
-    std::cout << "The minumum limit of int data type : " << std::numeric_limits<int>::min() << std::endl;
-    std::cout << "The maximum limit of int data type : " << std::numeric_limits<int>::max() << std::endl;
-    std::cout << "The maximum limit of unsigned int data type : " << std::numeric_limits<unsigned int>::max() << std::endl;
-    std::cout << "The minumum limit of long long data type : " << std::numeric_limits<long long>::min() << std::endl;
-    std::cout << "The maximum limit of long long data type : " << std::numeric_limits<long long>::max() << std::endl;
-    std::cout << "The maximum limit of unsigned long long data type : " << std::numeric_limits<unsigned long long>::max() << std::endl;
-    std::cout << "The minumum limit of char data type : " << static_cast<int>(std::numeric_limits<char>::min()) << std::endl;
-    std::cout << "The maximum limit of char data type : " << static_cast<int>(std::numeric_limits<char>::max()) << std::endl;
-    std::cout << "The maximum limit of unsigned char data type : " << static_cast<int>(std::numeric_limits<unsigned char>::max()) << std::endl;
-    std::cout << "The minumum limit of short data type : " << std::numeric_limits<short>::min() << std::endl;
-    std::cout << "The maximum limit of short data type : " << std::numeric_limits<short>::max() << std::endl;
-    std::cout << "The maximum limit of unsigned short data type : " << std::numeric_limits<unsigned short>::max() << std::endl;
+    // Check limits
+    std::cout << "Check whether the primitive values crossing the limits or not :" << std::endl;
+    std::cout << "--------------------------------------------------------------------" << std::endl;
+    std::cout << "The Gender is : " << gender << std::endl;
+    std::cout << "Is she married? : " << isMarried << std::endl;
+    std::cout << "Number of sons she has : " << numberOfSons << std::endl;
+    std::cout << "Year of her appointment : " << yearOfAppointment << std::endl;
+    std::cout << "Salary for a year : " << salaryForAYear << std::endl;
+    std::cout << "Height is : " << height << std::endl;
+    std::cout << "GPA is : " << gpa << std::endl;
+    std::cout << "Salary drawn upto : " << salaryDrawnUpto << std::endl;
+    std::cout << "Balance till : " << balanceTill << std::endl;
 
     return 0;
 }
