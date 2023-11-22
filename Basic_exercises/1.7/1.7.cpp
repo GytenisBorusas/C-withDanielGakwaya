@@ -1,46 +1,81 @@
 /*
 
-5. Write a program in C++ to check the upper and lower limits of integer.
-Expected Output:
-Check the upper and lower limits of integer :
---------------------------------------------------
-The maximum limit of int data type : 2147483647
-The minimum limit of int data type : -2147483648
-The maximum limit of unsigned int data type : 4294967295
-The maximum limit of long long data type : 9223372036854775807
-The minimum limit of long long data type : -9223372036854775808
-The maximum limit of unsigned long long data type : 18446744073709551615
-The Bits contain in char data type : 8
-The maximum limit of char data type : 127
-The minimum limit of char data type : -128
-The maximum limit of signed char data type : 127
-The minimum limit of signed char data type : -128
-The maximum limit of unsigned char data type : 255
-The minimum limit of short data type : -32768
-The maximum limit of short data type : 32767
-The maximum limit of unsigned short data type : 65535
+7. Write a program in C++ to display various type or arithmetic operation using mixed data type.
+Sample output:
+
+Display arithmetic operations with mixed data type :
+---------------------------------------------------------
+5 + 7 = 12
+3.7 + 8.0 = 11.7
+5 + 8.0 = 13.0
+5 - 7 = -2
+3.7 - 8.0 = -4.3
+5 - 8.0 = -3.0
+5 * 7 = 35
+3.7 * 8.0 = 29.6
+5 * 8.0 = 40.0
+5 / 7 = 0
+3.7 / 8.0 = 0.5
+5 / 8.0 = 0.6
 
 */
 
 #include <iostream>
-#include <limits>
+
+#include <iomanip> // for std::fixed and std::setprecision
+
+
 
 
 
 int main(){
 
-    std::cout << "The minumum limit of int data type : " << std::numeric_limits<int>::min() << std::endl;
-    std::cout << "The maximum limit of int data type : " << std::numeric_limits<int>::max() << std::endl;
-    std::cout << "The maximum limit of unsigned int data type : " << std::numeric_limits<unsigned int>::max() << std::endl;
-    std::cout << "The minumum limit of long long data type : " << std::numeric_limits<long long>::min() << std::endl;
-    std::cout << "The maximum limit of long long data type : " << std::numeric_limits<long long>::max() << std::endl;
-    std::cout << "The maximum limit of unsigned long long data type : " << std::numeric_limits<unsigned long long>::max() << std::endl;
-    std::cout << "The minumum limit of char data type : " << static_cast<int>(std::numeric_limits<char>::min()) << std::endl;
-    std::cout << "The maximum limit of char data type : " << static_cast<int>(std::numeric_limits<char>::max()) << std::endl;
-    std::cout << "The maximum limit of unsigned char data type : " << static_cast<int>(std::numeric_limits<unsigned char>::max()) << std::endl;
-    std::cout << "The minumum limit of short data type : " << std::numeric_limits<short>::min() << std::endl;
-    std::cout << "The maximum limit of short data type : " << std::numeric_limits<short>::max() << std::endl;
-    std::cout << "The maximum limit of unsigned short data type : " << std::numeric_limits<unsigned short>::max() << std::endl;
+    int number1{5};
+    int number2{7};
+    float number3{3.7};
+    float number4{8.0};
+
+    int result1 = number1 + number2;
+    double result2 = number3 + number4;
+    float result3 = number1 + number4;
+
+    int result4 = number1 - number2;
+    double result5 = number3 - number4;
+    float result6 = number1 - number4;
+
+    int result7 = number1 * number2;
+    double result8 = number3 * number4;
+    float result9 = number1 * number4;
+
+    int result10 = number1 / number2;
+    double result11 = number3 / number4;
+    float result12 = number1 / number4;
+
+
+    std::cout << number1 << " + " << number2 << " = " << result1 << std::endl;
+    std::cout << number3 << " + " << number4 << " = " << result2 << std::endl;
+    std::cout << std::fixed << std::setprecision(1); // This sets the precision for floating point output
+    std::cout << number1 << " + " << number4 << " = " << result3 << std::endl;
+    std::cout << std::endl;
+
+    std::cout << number1 << " - " << number2 << " = " << result4 << std::endl;
+    std::cout << number3 << " - " << number4 << " = " << result5 << std::endl;
+    std::cout << std::fixed << std::setprecision(1); // This sets the precision for floating point output
+    std::cout << number1 << " - " << number4 << " = " << result6 << std::endl;
+    std::cout << std::endl;
+
+    std::cout << number1 << " * " << number2 << " = " << result7 << std::endl;
+    std::cout << number3 << " * " << number4 << " = " << result8 << std::endl;
+    std::cout << std::fixed << std::setprecision(1); // This sets the precision for floating point output
+    std::cout << number1 << " * " << number4 << " = " << result9 << std::endl;
+    std::cout << std::endl;
+
+    std::cout << number1 << " / " << number2 << " = " << result10 << std::endl;
+    std::cout << number3 << " / " << number4 << " = " << result11 << std::endl;
+    std::cout << std::fixed << std::setprecision(1); // This sets the precision for floating point output
+    std::cout << number1 << " / " << number4 << " = " << result12 << std::endl;
+    std::cout << std::endl;
+
 
     return 0;
 }
