@@ -21,10 +21,26 @@ The sizeof(bool) is : 1 bytes
 
 int main(){
 
-    int number1{29};
-    int number2{30};
+    char dataType1{};
+    short dataType2{};
+    int dataType3{};
+    long dataType4{};
+    long long dataType5{};
+    float dataType6{};
+    double dataType7{};
+    long double dataType8{};
+    bool  dataType9{};
 
-    int sum = number1 + number2;
-    std::cout << "The sum of " << number1 << " and " << number2 << " is : " << sum << std::endl;
+    std::cout << "The sizeof(char) is : " << sizeof(dataType1) << " bytes" << std::endl;
+    std::cout << "The sizeof(short) is : " << sizeof(dataType2) << " bytes" << std::endl;
+    std::cout << "The sizeof(int) is : " << sizeof(dataType3) << " bytes" << std::endl;
+    std::cout << "The sizeof(long) is : " << sizeof(dataType4) << " bytes" << std::endl;
+    std::cout << "The sizeof(long long) is : " << sizeof(dataType5) << " bytes" << std::endl;
+    std::cout << "The sizeof(float) is : " << sizeof(dataType6) << " bytes" << std::endl;
+    std::cout << "The sizeof(double) is : " << sizeof(dataType7) << " bytes" << std::endl;
+    std::cout << "The sizeof(long double) is : " << sizeof(dataType8) << " bytes" << std::endl;
+    std::cout << "The sizeof(bool) is : " << sizeof(dataType9) << " bytes" << std::endl;
+
+
     return 0;
 }
